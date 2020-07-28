@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+
+div.container {
+	height: 100%;
+}
+
+div.apresentacao {
+	font-size: 5vw;
+	background-color: #142a3e;
+	text-align: center;
+	padding: 3vw;
+	position: relative;
+}
+
+.linha {
+	height: 5px;
+	/*movimenta a madeida de cima*/
+	background: red;
+	transform:  translate(0px, -50px);
+
+}
+
+h1.titulo {
+	
+	/* font-size: 5vw; comentei e não fez diferença */
+	font: 80px "Press Start 2P", cursive;
+	transform: translate(0px, 0px); /* ajustar - muda de local quando a aparece a palavra */
+	color: white;
+}
+
+p.descricao {
+	font-size: 1.7vw;
+	font: italic;
+	color: #eec513; /* Ajustar as cores para as padrões */
+	transform: translate(0px, -60px); /* ajustar - muda de local quando a aparece a palavra */
+
+}
+
+button.botaonovojogo {
+	font: 20px "Press Start 2P", cursive;
+	height: 50px;
+	width: 280px;
+	border-radius: 10px;
+	text-align: center;
+	color: #142a3e;
+	background-color:white;
+	position: absolute;
+	transform: translate(-135px, -90px); /* ajustar - muda de local quando a aparece a palavra */
+
+}
+
+#category {
+	transform: translate(-10px, -150px); /*acho que ficou num lugar bacana*/
+	float: initial;
+	font: italic;	
+	color:white;
+}
+
+div.dashes {
+	transform: translate(0px, -120px); /*acho que ficou num lugar bacana*/
+	font-size: 4vw;
+	width: 50 px;
+	height: 50 px;
+	font: italic;	
+	color:white;
+}
+
+div.wrongletters {
+    transform: translate(0px, -110px); /*acho que ficou num lugar bacana*/
+    float: initial;
+    font-size: 2vw;
+	font: italic;	
+	color:white;
+}
+
+
+div.painel {
+	width: 50%;
+	float:right;
+	margin-right: 0vw;
+	font-size: 3vw;
+	padding: 5vw 0vw 5vw 0vw;
+	min-width:40vw;
+    float:right;
+    transform: translate(0px, -30px); /*acho que ficou num lugar bacana*/
+
+}
+
+
+div.game {
+	width: 50%;
+	float:left;
+	font-size: 3vw;
+	text-align: center;
+	padding: 5vw 0vw 5vw 0vw;
+    min-width:40vw;
+    transform: translate(100px, -100px); /*acho que ficou num lugar bacana*/
+
+}
+
+.clean{clear:both;}
+
+body {
+    background: #142a3e;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+}
+body,
+#trunks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#trunks {
+	position: relative;
+	/*movimenta a madeira e a forca para o lado*/ 
+	left: -130px;
+	/*retirei e subiu a madeira para onde eu queria*/
+    /*padding: 2em 0;*/
+}
+
+.trunk-1,
+.trunk-2,
+.trunk-3{
+    background: #BF854B;
+    width: 20px;
+}
+
+.trunk-1 {
+    height: 250px;
+}
+
+.trunk-2 {
+	height: 150px;
+	/*movimenta a madeida de cima*/
+    transform: rotate(90deg) translate(-130px, -45px);
+}
+
+.trunk-3 {
+    height: 100px;
+    transform: rotate(90deg) translate(115px, 20px);
+    
+}
+
+#person,
+.top-rope,
+.middle-rope,
+.bottom-rope,
+.bottom-rope::before {
+    position: absolute;
+}
+
+.top-rope {
+	/*nó da forca */
+	width: 10px; /*desenho do nó */
+	height: 30px; /*desenho do nó */
+    top: -20px; /* posicionamento do nó*/
+    left: 380px; /* posicionamento do nó*/
+    border-radius: 10px;
+    box-shadow: 
+        10px 0 0 0 #F7B239,
+        10px 0 0 1px #cc9028,
+        20px 0 0 0 #F7B239,
+        20px 0 0 1px #cc9028,
+        30px 0 0 0 #F7B239,
+        30px 0 0 1px #cc9028;
+}
+
+.middle-rope {
+	/*corda da forca */
+    background: #F7B239;
+    width: 10px;
+    height: 40px; 
+    top: 8px; /* posicionamento da corda*/
+    left: 400px; /* posicionamento da corda*/
+    border: 1px solid #cc9028;
+	border-radius: 10px;
+	/* comentei o z-index pois ele tava deixando a corda atras da div */
+    /* z-index: -10; */
+    box-sizing: border-box;
+}
+
+.bottom-rope {
+    background: transparent;
+    width: 30px;
+    height: 40px;
+    top: 50px; /* posicionamento do laço*/
+    left: 388px; /* posicionamento do laço*/
+    border: 2px solid #cc9028;
+    box-shadow: inset 0 0 0 7px #F7B239;
+    border-radius: 50%;
+    /* comentei o z-index pois ele tava deixando a corda atras da div */
+    /* z-index: -10; */
+}
+
+.bottom-rope::before {
+    content: "";
+    width: 5px;
+    height: 20px;
+    top: -20px;
+    left: 12px;
+    border-radius: 10px;
+    box-shadow: 
+        5px 0 0 0 #F7B239,
+        5px 0 0 1px #cc9028,
+        10px 0 0 0 #F7B239,
+        10px 0 0 1px #cc9028;
+    transform: rotate(90deg);
+}
+
+.head,
+.person-body,
+.right-arm,
+.left-arm,
+.right-leg,
+.left-leg {
+    background: #fff;
+    position: absolute; 
+    /*transition: 1s; não notei diferença ao comentar*/ 
+}
+
+.head {
+	/*posicionamento da cabeça */
+    width: 50px;
+    height: 50px;
+    top: -190px;
+    left: 250px;
+    border-radius: 50%;
+}
+
+
+.eyes {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: .8em;
+	color: red;
+    opacity: 0.3; 	/* Esconde os olhos */
+    position: absolute;
+    top: -190px;
+    left: 258px; /*posicionamento horizontal olho direito */
+}
+
+.eye-2 {
+    left: 280px; /*posicionamento horizontal olho esquerdo */
+}
+
+/* Acho que fazendo dessa forma posiciona varios elementos de uma vez*/
+.person-body,
+.right-arm,
+.left-arm,
+.right-leg,
+.left-leg {
+    width: 10px;
+    border-radius: 10px;
+	top: -142px; /*posicionamento do tronco e bracos na vertical*/
+}
+
+.person-body {
+	height: 70px; /*desenho do troco do boneco*/
+    left: 270px;  /*posição do tronco na horizontal*/
+}
+
+.right-arm,
+.left-arm,
+.right-leg,
+.left-leg {
+	height: 40px; /*desenho braços e pernas*/
+    left: 270px;  /* Posicionamento braços e pernas horizontal */
+
+}
+
+.right-leg,
+.left-leg {
+    top: -80px; /*posicionamento vertical das pernas */
+
+}
+
+.right-arm, .right-leg {
+    transform: rotate(45deg) translate(-10px, 10px);
+}
+
+.left-arm,
+.left-leg {
+    transform: rotate(-45deg) translate(10px, 10px);
+}
+
+#display {
+    font-size: 2em;
+}
+
+.hide {
+    opacity: 0.2; /* Esconde o boneco */
+}
+
